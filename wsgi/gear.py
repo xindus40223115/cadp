@@ -258,6 +258,192 @@ class Gear(object):
         if(counter<5000):
             outstring = "進行"+str(counter)+"次重複運算後,得到合用的facewidth值為:"+str(facewidth)
         return outstring
+    #@+node:2015.20141125062058.1754: *3* w12_1
+    @cherrypy.expose
+    def w12_1(self, *args, **kwargs):
+        outstring = '''
+    <!DOCTYPE html>
+          <html>
+          <head>
+          <title>My first JavaScript page</title>
+          </head>
+          <body>
+         這是一個超文件
+          </body>
+          </html>
+    '''
+        return outstring
+    #@+node:2015.20141125062058.1755: *3* w12_2
+    @cherrypy.expose
+    def w12_2(self, *args, **kwargs):
+        outstring = '''
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <title>My first JavaScript page</title>
+           
+        <script type="text/javascript">
+        //JavaScript code goes here
+        alert("來自 JavaScript 程式, 放在 head 標註中");
+        </script>
+           
+        </head>
+        <body>
+     
+        </body>
+        </html>
+    '''
+        return outstring
+    #@+node:2015.20141125062058.1756: *3* w12_3
+    @cherrypy.expose
+    def w12_3(self, *args, **kwargs):
+        outstring = '''
+    <!DOCTYPE html>
+         <html>
+         <head>
+         <title>My first JavaScript page</title>
+         </head>
+         <body>
+            
+         <script type="text/javascript">
+         //JavaScript code goes here, 單行註解
+         /* JavaScript code
+    goes here, 多行註解 */
+        alert("來自 JavaScript 程式, 放在 body 標註中");
+         </script>
+            
+         </body>
+         </html>
+    '''
+        return outstring
+    #@+node:2015.20141125062058.1757: *3* w12_4
+    @cherrypy.expose
+    def w12_4(self, *args, **kwargs):
+        outstring = '''
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>第十二週第四個程式: 變數與常數</title>
+    </head>
+    <body>
+    <h1>第十二週第四個程式: 變數與常數</h1>
+     
+    <script type="text/javascript">
+     
+    //Create a variable
+     
+    var amountDue;
+     
+    /* Assign a value to it:
+     
+    you do not know the value yet
+     
+    so for now it is 0 */
+     
+    amountDue = 0;
+     
+    /* Create 2 more vars and assign 
+     
+    a value to each at the same time */
+     
+    var productPrice = 5;
+     
+    var quantity = 2;
+     
+    /* Assign a value to amountDue by
+     
+    multiplying productPrice by quantity */
+     
+    amountDue = productPrice * quantity;
+     
+    /* Notice how the value of amountDue has
+     
+    changed from 0 to 10 -
+     
+    -Alert the result to check it is OK
+     
+    Notice: you do not use ' ' with var name in alert() */
+     
+    alert(amountDue);
+     
+    </script>
+       
+    </body>
+    </html>
+    '''
+        return outstring
+    #@+node:2015.20141125062058.1758: *3* w12_5
+    @cherrypy.expose
+    def w12_5(self, *args, **kwargs):
+        outstring = '''
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>第十二週第五個程式: 將結果印在網頁</title>
+    </head>
+    <body>
+    <h1>第十二週第五個程式: 將結果印在網頁</h1>
+     
+    <script type="text/javascript">
+     
+    //Create and initialize your variables
+     
+    var result = 0;
+     
+    var firstNum = 20;
+     
+    var secondNum = 5;
+     
+    //Addition: result = 25
+     
+    result = firstNum + secondNum;
+     
+    //write result on the page
+     
+    document.write(result);
+     
+    </script>
+       
+    </body>
+    </html>
+    '''
+        return outstring
+    #@+node:2015.20141125062058.1759: *3* w12_6
+    @cherrypy.expose
+    def w12_6(self, *args, **kwargs):
+        outstring = '''
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>第十二週第六個程式: 字串與變數串接</title>
+    </head>
+    <body>
+    <h1>第十二週第六個程式: 字串與變數串接</h1>
+     
+    <script type="text/javascript">
+     
+    //Create and initialize your variables
+     
+    var firstText = "Hello";
+     
+    var secondText = "World!";
+
+    var 數值 = 123;
+     
+    //Resulting value of assignment is Hello World!
+     
+    var message = firstText + ' ' + secondText + '  '+ 數值;
+     
+    //write result on the page
+     
+    document.write(message);
+     
+    </script>
+       
+    </body>
+    </html>
+    '''
+        return outstring
     #@-others
 #@-others
 root = Gear()
